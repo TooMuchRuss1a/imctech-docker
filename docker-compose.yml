@@ -20,3 +20,11 @@ services:
     working_dir: /var/www/html
     volumes:
       - ${APP_PATH}:/var/www/html/
+
+  npm:
+    image: node:14
+    container_name: imctech-npm
+    working_dir: /var/www/html
+    entrypoint: [ "npm" ]
+    volumes:
+      - ${APP_PATH}:/var/www/html/
