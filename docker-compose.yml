@@ -21,10 +21,9 @@ services:
     volumes:
       - ${APP_PATH}:/var/www/html/
 
-  npm:
+  node:
     image: node:19
-    container_name: imctech-npm
+    container_name: imctech-node
     working_dir: /var/www/html
-    entrypoint: [ "npm" ]
     volumes:
       - ${APP_PATH}:/var/www/html/
